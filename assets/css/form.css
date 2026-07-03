@@ -22,10 +22,14 @@ label{
     font-size: 14px;
 }
 
+textarea{
+    height: 5rem;
+}
+
 input, textarea{
     padding: 10px;
     border: solid 0.1px #ddd;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 10px;
     resize: none;
 }
@@ -42,6 +46,7 @@ button{
 @media ( max-width: 480px ){
     #formContato{
         width: 90%;
+        scale: 0.9;
     }
 }
 
