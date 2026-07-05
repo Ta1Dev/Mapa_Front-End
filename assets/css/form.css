@@ -1,68 +1,61 @@
+/* ====== Alinhamento do formulario no centro da tela ======*/
 main {
-    display: flex;
+    display: flex;                  
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
 }
-
+/* ==== configurações gerais de proporção e estilo do formulario ==== */
 #formContato{
     display: flex;
-    flex-direction: column;
-    padding: 4rem 1.5rem;
-    width: 50%;
+    flex-direction: column;         /* disponhe os elementos dentro do formulario um abaixo do outro */
+    padding: 4rem 1.5rem;           /* atribui o distanciamento dos elemsntos internos de forma que fique um retangulo em pé */
+    width: 50%;                     /* largura que o formulario ira ocupar na tela */
     margin: 0;
     border: solid 3px #ddd;
-    border-radius: 20px;
-}
-
-label{
-    font-size: 14px;
+    border-radius: 20px;        
 }
 
 textarea{
-    height: 5rem;
+    height: 5rem;                   /* altura relativa da area de inserir o texto */
 }
-
+/* ==== customização dos imputs e do textarea  ==== */
 input, textarea{
-    padding: 10px;
+    padding: 1rem;
     border: solid 0.1px #ddd;
     border-radius: 10px;
     margin-bottom: 10px;
-    resize: none;
+    resize: none;                   /* impede que o usuario tenha a opção de alterar o tamanho do textarea */
 }
-
+/* estilização do botão do formulario */
 button{
-    font-size: 14px;
     border: solid 1px #ddd;
     border-radius: 10px;
     align-self: center;
     padding: 0.5rem 3rem;
     background-color: #fff;
 }
-
+/* aplica efeito quando passado o mouse encima do botão */
 button:hover{
     background-color: #ddd;
-    transition: 0.3s;
-    scale: 1.1;
 }
-
+/* customização da mensagem de erro de envio do formulario */
 .erro {
     color: red;
     font-size: 0.9em;
     margin-bottom: 0.5rem;
-    transition: 0.2s;
-
 }
+/* customização da mensagem de sucesso de eenvio do formulario */
 .sucesso {
     color: green;
     font-size: 1em;
     font-weight: bold;
-    align-self: center;
+    align-self: center;             /* alinha especificamente esse elemeto para o centro */
 }
-
-@media ( max-width: 480px ){
+/* ==== configurações de poratbilidade para dispositivos moveis ==== */
+@media ( max-width: 480px ){                
     #formContato{
         width: 90%;
         scale: 0.9;

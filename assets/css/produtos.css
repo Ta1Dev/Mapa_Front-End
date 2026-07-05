@@ -1,11 +1,12 @@
+/* ==== configurações da seção dos produtos ==== */
 #produto{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-around;              /* manten um espacamento igual entre os elementos */
+    flex-wrap: wrap;                            /* faz o empilhamento dos elmentos dependendo do tamnaho da tela ou zoom aplicado */
     gap: 30px;
     margin-top: 20px;
 }
-
+/* ==== estilização dos cartões de apresentação dos produtos ==== */
 .card{
     width: 200px;
     border: solid 1px #ddd;
@@ -13,11 +14,13 @@
     padding: 50px;
     text-align: center;
 }
+/*imagen inserida dentro dos cards*/
 .card img{
     max-width: 100%;
     border: solid #ddd;
     border-radius: 20px;
 }
+/* botão dos cards */
 .card button{
     background-color: #f9f9f9;
     color: #333;
@@ -27,7 +30,7 @@
     border: solid 1px;
     border-radius: 50px;
 }
-
+/* ==== opções de portabilidade ==== */
 @media(max-width: 768px){
     .card{
         width: 20%;
@@ -39,30 +42,32 @@
 @media( max-width: 480px ){
     #produto{
         display: flex;
-        flex-direction: column;
+        flex-direction: column;             /* altera a disposição dos elementos internos de lado a lado para abaixo um do outro */
         gap: 10px;
         margin-top: 0;
     }
     .card{
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding:0px;
-        border: none;
+        flex-direction: row;                /* os cards ficam deitados para apresentaçao em celulares */
+        align-items: center;                
+        justify-content: space-between;     /* espaça igualmente */
+        width: 100%;                        /* os cards oculpam o espaço disponivel da seção produtos */
+        padding:0px;                        /* retira o espaço do intes pras margens pra ficar mais compact */
+        border: none;                       /* remove as bordas */
     }
     .card h3{
-        width: 30%;
+        width: 30%;                         /* diminui o espaço que a descrição dos intes devem ocupar */
     }
     .card h3, .card p {
-        font-size: 80%;
+        font-size: 80%;                     /* reduz a fonte dos cards  */
     }
+    /* ajustes de exibição no tamanho das imagens */
     .card img{
         width: 5rem;
         height: auto;
         border-radius:20px;
     }
+    /* ajustes de tamanho e exibição do botão */
     .card button{
         border: none;
         padding: 0;

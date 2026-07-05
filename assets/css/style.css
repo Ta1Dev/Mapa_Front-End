@@ -2,61 +2,57 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
 }
 
 /*Estilo geral*/
 body{
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.6;                   /* define o tamanho das linhas do body */
     background-color: #f9f9f9;
     color: #333;
-    height: 100vh;
+    
 }
 
-/*Cabecalho e menu*/
+/*Cabecalho*/
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;         /* espaçamento igual entre os elementos (horizontalmente) */
     background: #5C0A28;
     color: #f9f9f9;
-    padding: 10px 20px;
-    height: 6em;
+    padding: 1.1rem 1rem;
 }
 
+/* titulo do cabeçalho */
 header h1{
     margin-bottom: 10px;
     font-size: 2.5rem;
 }
-
+/* altera geral as listas */
 nav ul {
     display: flex;
-    list-style: none;
-    gap: 2rem;
+    list-style: none;                   /* remove os efietos de lista como ( . ) */
+    gap: 2rem;                          /* espaça as istas */    
 }
-
+/* mexe nos intens das lista */
 nav ul li{
     font-size: 15px;
-    align-items: center;
+    display: flex;
+    align-items: center;                /* alinha o texto dos menus no centro */
 }
-
+/* links dentro das listas */
 nav ul li a{
     color: #f9f9f9;
     text-decoration: none;
     padding: 2px;
     border-radius: 20px;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: bold;                /* texto forte */  
 }
 
 main{
-    padding: 20px;
+    padding: 20px;                      /* espaçamento dos intes internos do main pras margens */
 }
-
-button{
-    color: #333;
-}
-
+/*rodapé*/
 footer{
     background: #333;
     color: #fff;
@@ -72,30 +68,28 @@ footer{
     }
     nav ul{
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;  
-    }
-    nav ul li {
+        flex-wrap: nowrap;              /* impede que os elementos dentro do nav deixem de ficar lado a lado */
+        justify-content: space-around;  /* mantem o espaçamento */
     }
     nav ul li a{
-        font-size: 1.2rem;
+        font-size: 1.2rem;              /* reduz a fonte do menu */
     }
     header h1 {
-        font-size: 2rem;
+        font-size: 2rem;                /* reduz a fonte do titulo */
     }
 }
 @media( max-width: 480px ){
     body{
-        font-size: 14px;
+        font-size: 14px;                /* reduz a fonte dos texto primarios */
     }
     header h1{
-        font-size: 1.5rem;
+        font-size: 1.5rem;              /* reduz o titulo */
     }
     nav ul{
-        gap: 1rem;
+        gap: 1rem;                      /* reduz o gap dos elementos do menu */
     }
     nav ul li a{
-        font-size: 0.9rem;
+        font-size: 0.9rem;              /* reduz a fonte do menu */
     }
 }
 

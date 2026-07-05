@@ -1,27 +1,29 @@
 document.addEventListener("DOMContentLoaded", function(){     //essa função faz o script rodar so depois que todo o html e carregado
-    const form = document.getElementById("formContato");
+    
+    const form = document.getElementById("formContato");        //atribui o id do form a variavel form
 
-    form.addEventListener("submit", function(event){
-        event.preventDefault();
-        
+    form.addEventListener("submit", function(event){                        //função ativada quando botão for acionado
+        event.preventDefault();                                             //impede que o navegador faça o envio padrão
+        //captura os elmentos de span do form usando Id
         document.getElementById("erroNome").textContent = "";
         document.getElementById("erroEmail").textContent = "";
         document.getElementById("erroMensagem").textContent = "";
         document.getElementById("sucessoForm").textContent = "";
 
-        const nome = document.getElementById("nome").value.trim();
+        //pega os elementos de dados do form usando Id
+        const nome = document.getElementById("nome").value.trim();            //" value.trim() " evita espaços
         const email = document.getElementById("email").value.trim();
         const mensagem = document.getElementById("mensagem").value.trim();
 
-        let valido = true;
+        let valido = true;              //variavel de controle
 
-         // Validação simples
+        // Validação simples
         if (nome === "") {
-            document.getElementById("erroNome").textContent = "Preencha o campo Nome";
-            valido = false
+            document.getElementById("erroNome").textContent = "Preencha o campo Nome";          //escreve no span
+            valido = false      //falha o envio
         }
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;                                  //garante que o valor seja um email valido
         if (email === "" || !emailRegex.test(email)) {
             document.getElementById("erroEmail").textContent = "Digite um e-mail válido.";
             valido = false;
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(){     //essa função fa
 
         if( valido ){
             document.getElementById("sucessoForm").textContent = "Formulário enviado com sucesso!";
-            form.reset();
+            form.reset();           //reseta o formulario
         }
     })
 })
